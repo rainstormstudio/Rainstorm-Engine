@@ -1,5 +1,5 @@
 #pragma once
-#include "ECS.hpp"
+#include "Core.hpp"
 #include <array>
 #include <queue>
 #include <cassert>
@@ -11,7 +11,6 @@ private:
   uint32_t mEntityCount{};
 public:
   EntityManager();
-  ~EntityManager();
 
   Entity createEntity();
   void destroyEntity(Entity entity);

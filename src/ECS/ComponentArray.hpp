@@ -1,5 +1,5 @@
 #pragma once
-#include "ECS.hpp"
+#include "Core.hpp"
 #include <array>
 #include <cassert>
 #include <unordered_map>
