@@ -4,7 +4,15 @@
 #include <unordered_map>
 #include <memory>
 
-class ComponentManager {
+class ComponentManager {  
+private:
+  std::unordered_map<const char*, ComponentType> mComponentTypes{};
+  std::unordered_map<const char*, std::shared_ptr<IComponentArray>> mComponentArrays{};
+  ComponentType mNextComponentType{};
+
+  template<typename T>
+  std::shared_ptr<ComponentArray<T>> getComponentArray();
+  
 public:
   template<typename T>
   void registerComponent();
@@ -22,12 +30,4 @@ public:
   T& getComponent(Entity entity);
 
   void entityDestroyed(Entity entity);
-  
-private:
-  std::unordered_map<const char*, ComponentType> mComponentTypes{};
-  std::unordered_map<const char*, std::shared_ptr<IComponentArray>> mComponentArrays{};
-  ComponentType mNextComponentType{};
-
-  template<typename T>
-  std::shared_ptr<ComponentArray<T>> getComponentArray();
 };
