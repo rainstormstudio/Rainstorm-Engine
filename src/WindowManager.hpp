@@ -15,6 +15,7 @@ public:
   int initialize(const char* windowTitle, GLint windowWidth, GLint windowHeight);
   GLfloat getBufferWidth();
   GLfloat getBufferHeight();
+  bool getShouldClose();
   void update();
   void processEvents();
   void destroy();

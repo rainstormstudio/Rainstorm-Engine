@@ -54,12 +54,16 @@ GLfloat WindowManager::getBufferHeight() {
   return bufferHeight;
 }
 
+bool WindowManager::getShouldClose() {
+  return glfwWindowShouldClose(window);
+}
+
 void WindowManager::update() {
   glfwSwapBuffers(window);
 }
 
 void WindowManager::processEvents() {
-  
+  glfwPollEvents();
 }
 
 void WindowManager::destroy() {
