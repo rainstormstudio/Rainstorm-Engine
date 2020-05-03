@@ -1,10 +1,12 @@
 #pragma once
 #include "Timer.hpp"
+#include "WindowManager.hpp"
 
 class Game {
 private:
   bool mIsRunning;
   Timer *timer;
+  WindowManager mainWindow;
 
 public:
   Game();
