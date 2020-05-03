@@ -1,6 +1,6 @@
 # Rainstorm Engine
 ## Engine Description
-   Rainstorm Engine is a simple 3d game engine using OpenGL. It uses Entity Component System (ECS) and OpenGL.
+   Rainstorm Engine is a simple 3d game engine. It uses Entity Component System (ECS) and OpenGL.
 ## Prerequisites
    ...
 ## Installings
